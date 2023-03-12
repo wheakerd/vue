@@ -8,24 +8,24 @@
 // +----------------------------------------------------------------------
 declare(strict_types=1);
 
-namespace wheakerd\npm\exception;
-class NpmException extends \RuntimeException
+namespace wheakerd\vue\exception;
+
+use RuntimeException;
+
+/**
+ * npm解析异常抛出类
+ */
+class NpmException extends RuntimeException
 {
-    protected string $template;
-
-    public function __construct(string $message, string $template = '')
-    {
-        $this->message = $message;
-        $this->template = $template;
-    }
-
     /**
-     * 获取模板文件
-     * @access public
-     * @return string
+     * 架构函数
+     * @param string $message
+     * @param string $code
      */
-    public function getTemplate(): string
+    public function __construct(string $message, string $code = '')
     {
-        return $this->template;
+        parent::__construct();
+        $this->message = $message;
+        $this->code = $code;
     }
 }

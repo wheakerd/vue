@@ -10,16 +10,33 @@ namespace wheakerd\vue\interface;
 
 interface InterfaceVueTemplate
 {
+    /**
+     * @param array $config
+     */
     function __construct(array $config = []);
 
+    /**
+     * @param string $name
+     * @param mixed $value
+     * @return void
+     */
     function __set(string $name, mixed $value): void;
 
+    /**
+     * @param string $name
+     * @return mixed
+     */
     function __get(string $name): mixed;
 
-    function config(array $config): static;
-
+    /**
+     * @param string $name
+     * @return mixed
+     */
     function getConfig(string $name): mixed;
 
-    function fetch(): string;
-
+    /**
+     * @param string $url
+     * @return mixed
+     */
+    function unpack(string $url): mixed;
 }

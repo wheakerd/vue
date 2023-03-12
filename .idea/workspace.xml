@@ -27,12 +27,14 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "F:/composer_library/vue/vue/src/interface",
+    "last_opened_file_path": "F:/composer_library/vue/vue/test/index",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="F:\composer_library\vue\vue\test\index" />
+      <recent name="F:\composer_library\vue\vue\src\vue\driver" />
       <recent name="F:\composer_library\vue\vue\src\interface" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
@@ -47,7 +49,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1678602398600</updated>
-      <workItem from="1678602399795" duration="2559000" />
+      <workItem from="1678602399795" duration="15873000" />
     </task>
     <servers />
   </component>

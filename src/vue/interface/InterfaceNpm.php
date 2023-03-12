@@ -10,19 +10,47 @@ declare(strict_types=1);
 
 namespace wheakerd\vue\interface;
 
+use wheakerd\vue\parse\Npm;
+
 interface InterfaceNpm
 {
-    function __construct();
+    /**
+     * 构架函数
+     * @param array $config
+     */
+    function __construct(array $config = []);
 
-    function getFileContent(): null|string;
+    /**
+     * @param array $config
+     * @return Npm
+     */
+    function config(array $config): Npm;
 
-    function getImport(): null|string;
+    /**
+     * @param string $pack
+     * @return mixed
+     */
+    function getJson(string $pack = ''): mixed;
 
-    function getTemplate(): null|string;
+    /**
+     * @return Npm
+     */
+    function convert(): Npm;
 
-    function getScript(): null|string;
+    /**
+     * @param string $libName
+     * @return void
+     */
+    function pollingSeek(string $libName): void;
 
-    function getStyle(): null|string;
+    /**
+     * @param string $subLibName
+     * @return mixed
+     */
+    function getLibrary(string $subLibName): mixed;
 
-    function unpack(): string;
+    /**
+     * @return string
+     */
+    function importMap(): string;
 }

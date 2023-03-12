@@ -8,27 +8,21 @@
 // +----------------------------------------------------------------------
 declare(strict_types=1);
 
-namespace wheakerd\phpvue\exception;
+namespace wheakerd\vue\exception;
 
-use \Exception;
+use Exception;
 
 class VueTemplateNotFoundException extends Exception
 {
-    protected string $template;
-
-    public function __construct(string $message, string $template = '')
-    {
-        $this->message = $message;
-        $this->template = $template;
-    }
-
     /**
-     * 获取模板文件
-     * @access public
-     * @return string
+     * 构架函数
+     * @param string $message
+     * @param int $code
      */
-    public function getTemplate(): string
+    public function __construct(string $message, int $code = 11602)
     {
-        return $this->template;
+        parent::__construct();
+        $this->message = $message;
+        $this->code = $code;
     }
 }
