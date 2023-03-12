@@ -22,7 +22,7 @@ interface InterfaceNpm
 
     /**
      * @param array $config
-     * @return Npm
+     * @return \wheakerd\vue\parse\Npm
      */
     function config(array $config): Npm;
 

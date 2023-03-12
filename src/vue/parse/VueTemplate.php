@@ -92,7 +92,7 @@ final class VueTemplate implements InterfaceVueTemplate
      * 取值
      * @param string $url
      * @return $this
-     * @throws VueTemplateNotFoundException
+     * @throws \wheakerd\vue\exception\VueTemplateNotFoundException
      */
     public function unpack(string $url): VueTemplate
     {

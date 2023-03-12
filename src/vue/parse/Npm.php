@@ -50,7 +50,7 @@ final class Npm implements InterfaceNpm
     public function config(array $config): Npm
     {
         $this->config = array_merge(arrays: $this->config, array: $config);
-        $this->config['npm_modules'] = rtrim(string: $this->config['npm_modules'], characters: '/') . '/';
+        $this->config['npm_modules'] = rtrim(string: $this->config['npm_modules'], characters: '/') . 'Npm.php/';
         $this->json = $this->getJson(pack: $this->config['package']) [$this->config['dependencies']];
         return $this;
     }
